@@ -164,4 +164,42 @@ cours et exercices
     console.log(calculerSurfaceMurs(5, 6, 7));      // 130
 
 
+### CALCULER LA SOMME DES NOMBRES
+
+
+    Créer une fonction qui prend en paramètre un tableau de nombres 
+    et qui retourne la somme de tous les nombres
+
+    // EN JS
+    function calculerTotal (tabNombre)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return total;
+    }
+
+    // TESTER AVEC 
+    console.log(calculerTotal([ 1, 2, 3, 4 ]));      // 10 
+    console.log(calculerTotal([ 5, 6, 7, 8 ]));      // 26
+
+
+### COMPTER COMBIEN DE FOIS IL Y A DES NOMBRES PAIRS
+
+
+    Créer une fonction qui prend en paramètre un tableau de nombres 
+    et qui retourne combien de nombres pairs sont présents
+
+    // EN JS
+    function compterPair (tabNombre)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return compteur;
+    }
+
+    // TESTER AVEC 
+    console.log(compterPair([ 1, 2, 3, 4 ]));                   // 2 
+    console.log(compterPair([ 51, 62, 71, 81, 10, 200 ]));      // 3
+
+    
 
