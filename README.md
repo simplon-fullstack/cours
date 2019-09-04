@@ -122,9 +122,12 @@ cours et exercices
     console.log(trouverMin3([ 12, 11, 33, 78 ]));   // 11
 
 
-### PRIX TTC
+### CALCULER LE PRIX TTC
 
     Créer une fonction qui prend en paramètre 2 paramètres
+    * prixHT
+    * tauxTVA
+    La fonction doit calculer et retourner le prixTTC
 
     // EN JS
     function calculerPrixTTC (prixHT, tauxTVA)
@@ -137,6 +140,28 @@ cours et exercices
     // TESTER AVEC 
     console.log(calculerPrixTTC(100, 20));      // 120
     console.log(calculerPrixTTC(200, 10));      // 220
+
+
+### CALCULER LA SURFACE DES MURS
+
+
+    Créer une fonction qui prend en paramètre 3 paramètres
+    * hauteur
+    * largeur
+    * longueur
+    La fonction doit calculer la surface des 4 murs
+
+    // EN JS
+    function calculerSurfaceMurs (hauteur, largeur, longueur)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return surface;
+    }
+
+    // TESTER AVEC 
+    console.log(calculerSurfaceMurs(2, 3, 4));      // 28
+    console.log(calculerSurfaceMurs(5, 6, 7));      // 130
 
 
 
