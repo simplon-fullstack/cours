@@ -201,5 +201,23 @@ cours et exercices
     console.log(compterPair([ 1, 2, 3, 4 ]));                   // 2 
     console.log(compterPair([ 51, 62, 71, 81, 10, 200 ]));      // 3
 
-    
+### CONCATENER LES TEXTES DANS UN TABLEAU
+
+    Créer une fonction qui prend en paramètre un tableau de lettres
+    et qui retourne un texte qui contient toutes les lettres 
+    mais séparées par une virgule
+    (attention: pas de virgule au début ni à la fin)
+
+    // EN JS
+    function concatenerTexte (tabLettre)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return texteFinal;
+    }
+
+    // TESTER AVEC 
+    console.log(concatenerTexte([ 'a', 'b', 'c', 'd' ]));   // 'a,b,c,d' 
+    console.log(concatenerTexte([ 'i', 'j', 'k' ]));        // 'i,j,k'
+
 
