@@ -110,7 +110,7 @@ cours et exercices
     et qui retourne le plus petit des éléments du tableau
 
     // EN JS
-    function trouverMin3 (tabNombre)
+    function trouverMinN (tabNombre)
     {
         // AJOUTER LE CODE MANQUANT
 
