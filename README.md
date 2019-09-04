@@ -81,7 +81,7 @@ cours et exercices
             $min = $nombre1;
         else
             $min = $nombre2;
-            
+
         return $min;
     }
 
@@ -102,6 +102,8 @@ cours et exercices
     console.log(trouverMin3(32, 5, 2));    // 2
     console.log(trouverMin3(12, 3, 78));   // 3
 
+
+
 ### PLUS PETIT ENTRE N NOMBRES
 
     Créer une fonction qui prend en paramètre un tableau de nombres 
@@ -118,6 +120,23 @@ cours et exercices
     // TESTER AVEC 
     console.log(trouverMin3([ 32, 5, 1, 2 ]));      // 1
     console.log(trouverMin3([ 12, 11, 33, 78 ]));   // 11
+
+
+### PRIX TTC
+
+    Créer une fonction qui prend en paramètre 2 paramètres
+
+    // EN JS
+    function calculerPrixTTC (prixHT, tauxTVA)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return prixTTC;
+    }
+
+    // TESTER AVEC 
+    console.log(calculerPrixTTC(100, 20));      // 120
+    console.log(calculerPrixTTC(200, 10));      // 220
 
 
 
