@@ -4,6 +4,50 @@ cours et exercices
 
 ## JS ET PHP
 
+## FONCTIONS EN JS
+
+    // DECLARER LA FONCTION
+    function nomFonction (param1, param2)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return resultat;
+    }
+
+    // APPELER LA FONCTION
+    var resultat = nomFonction(1, 2);  // param1 = 1 ET param2 = 2
+
+    // AFFICHER DANS LA CONSOLE
+    console.log(resultat);
+
+
+## FONCTIONS EN PHP
+
+    // DECLARER LA FONCTION
+    function nomFonction ($param1, $param2)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return $resultat;
+    }
+
+    // APPELER LA FONCTION
+    $resultat = nomFonction(1, 2);      // $param1 = 1 ET $param2 = 2
+
+    // AFFICHER LE RESULTAT
+    echo "<h3>LE RESULTAT EST $resultat</h3>";
+
+
+
+
+
+
+
+
+
+
+
+
 ## EXERCICES FONCTIONS
 
 
@@ -16,6 +60,10 @@ cours et exercices
     function trouverMin2 (nombre1, nombre2)
     {
         // AJOUTER LE CODE MANQUANT
+        if (nombre1 < nombre2)
+            min = nombre1;
+        else
+            min = nombre2;
 
         return min;
     }
@@ -24,6 +72,18 @@ cours et exercices
     console.log(trouverMin2(32, 5));    // 5
     console.log(trouverMin2(12, 78));   // 12
 
+
+    // EN PHP
+    function trouverMin2 ($nombre1, $nombre2)
+    {
+        // AJOUTER LE CODE MANQUANT
+        if ($nombre1 < $nombre2)
+            $min = $nombre1;
+        else
+            $min = $nombre2;
+            
+        return $min;
+    }
 
 ### PLUS PETIT ENTRE 3 NOMBRES
 
