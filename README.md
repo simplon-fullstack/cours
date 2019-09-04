@@ -240,3 +240,30 @@ cours et exercices
     console.log(calculerBilan([ 100, -20, -300, 40 ]));   // { 'credit': 140, 'debit': -320 }
 
 
+### CALCULER LE TOTAL D'UN PANIER D'ACHAT
+
+    Créer une fonction qui prend en paramètre 2 tableaux de nombres
+    (qui ont le même nombre d'éléments)
+    et qui retourne le prix total du panier 
+
+    // EN JS
+    function calculerPanier (tabQuantite, tabPrixUnitaire)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return prixTotal;
+    }
+
+    // TESTER AVEC 
+    console.log(calculerPanier(
+                    [ 1, 2, 3, 4 ], 
+                    [ 10, 12, 13, 14]));
+    // prixTotal = 129
+
+    console.log(calculerPanier(
+                    [ 3, 2, 1 ], 
+                    [ 5, 6, 7]));
+    // prixTotal = 34
+
+    
+
