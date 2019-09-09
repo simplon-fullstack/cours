@@ -265,5 +265,63 @@ cours et exercices
                     [ 5, 6, 7]));
     // prixTotal = 34
 
-    
+
+### EXO PHP ET SQL : CONSTRUIRE UNE REQUETE SQL DELETE
+
+// Créer une fonction qui prend en paramètre 
+// $nomTable        LE NOM DE LA TABLE SQL
+// $id              VALEUR DE LA COLONNE id A EFFACER
+
+
+function creerDeleteSQL ($nomTable, $id)
+{
+    // AJOUTER LE CODE MANQUANT
+
+    return $requeteSQLPreparee;
+}
+
+$requeteSQLPreparee = creerDeleteSQL("contact", 5);
+
+echo "<pre>$requeteSQLPreparee</pre>";
+/*
+ON DEVRAIT OBTENIR LE TEXTE SUIVANT:
+
+DELETE FROM contact
+WHERE id = 5
+
+*/
+
+
+### EXO PHP ET SQL : CONSTRUIRE UNE REQUETE SQL INSERT
+
+// Créer une fonction qui prend en paramètre 
+// $nomTable        LE NOM DE LA TABLE SQL
+// $tabAssoColVal   UN TABLEAU ASSOCIATIF
+
+
+function creerInsertSQL ($nomTable, $tabAssoColVal)
+{
+    // AJOUTER LE CODE MANQUANT
+
+    return $requeteSQLPreparee;
+}
+
+$requeteSQLPreparee = creerInsertSQL("newsletter", [ "nom" => "julie", "email" => "julie@nomail.me" ]);
+
+echo "<pre>$requeteSQLPreparee</pre>";
+/*
+ON DEVRAIT OBTENIR
+
+INSERT INTO newsletter
+( nom, email )
+VALUES
+( :nom, :email )
+
+
+// ATTENTION: 
+// LES VALEURS DU TABLEAU ASSOCIATIF NE SONT PAS UTILISEES
+// ON MET DES JETONS (TOKENS) A LA PLACE DES VALEURS
+// SEULS LES CLES DU TABLEAU ASSOCIATIF SERVENT...
+
+*/
 
