@@ -266,62 +266,181 @@ cours et exercices
     // prixTotal = 34
 
 
+### DISTRIBUTEUR DE BILLETS
+
+    // CREER UNE FONCTION QUI PREND EN PARAMETRE UN NOMBRE
+    // montant
+    // ET QUI RETOURNE UN TEXTE DES BILLETS A DISTRIBUER
+    // LES BILLETS DISPONIBLES SONT 200, 100, 50, 20, 10, 5
+    // ON DISTRIBUERA LE MOINS DE BILLETS POSSIBLE
+
+    function distribuerBillet(montant)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return texteBillet;
+    }
+
+
+    // TESTS
+    console.log(distribuerBillet(235));
+    /*
+
+    ON DEVRAIT OBTENIR LE TEXTE SUIVANT
+
+    1x200, 3x10, 1x5
+
+    */
+
+
+    console.log(distribuerBillet(670));
+    /*
+
+    ON DEVRAIT OBTENIR LE TEXTE SUIVANT
+
+    3x200, 1x50, 1x20
+
+    */
+
+
+## DESSINER UN DAMIER
+
+    // CREER UNE FONCTION QUI PREND EN PARAMETRE UN NOMBRE
+    // largeur
+    // ET QUI RENVOIE UN DAMIER EN TEXTE
+
+    function dessinerDamier(largeur)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return texteDamier;
+    }
+
+
+    // TESTS
+    console.log(dessinerDamier(3));
+    /*
+
+    ON DEVRAIT OBTENIR LE TEXTE SUIVANT
+
+    X0X
+    0X0
+    X0X
+
+    */
+
+
+    console.log(dessinerDamier(4));
+    /*
+
+    ON DEVRAIT OBTENIR LE TEXTE SUIVANT
+
+    X0X0
+    0X0X
+    X0X0
+    0X0X
+
+    */
+
+    console.log(dessinerDamier(5));
+    /*
+
+    ON DEVRAIT OBTENIR LE TEXTE SUIVANT
+
+    X0X0X
+    0X0X0
+    X0X0X
+    0X0X0
+    X0X0X
+
+    */
+
+## EXO JS : CREER UNE CALCULATRICE
+
+    CREER UNE PAGE QUI PROPOSE UNE CALCULATRICE
+    POUR EFFECTUER UN CALCUL ENTRE 2 NOMBRES
+
+    CHAQUE CHIFFRE EST UN BOUTON
+
+    [0][1][2][3][4][5][6][7][8][9]
+
+    IL Y A UN CHAMP INPUT QUI AFFICHE LE NOMBRE
+    FORME A PARTIR DES CHIFFRES
+
+    [14567]
+
+    IL Y A DES BOUTONS POUR LES OPERATIONS [+][-][x][/]
+    * APPUYER SUR LE BOUTON D'UNE OPERATION PERMET DE FINIR LE PREMIER NOMBRE ET PASSER AU DEUXIEME NOMBRE
+
+    ET IL Y A UN BOUTON [=] POUR LANCER LE CALCUL ENTRE LES 2 NOMBRES
+    ON AFFICHERA LE RESULTAT
+
+    * ON PEUT PRESENTER L'ENSEMBLE SOUS CE LAYOUT
+
+    [NOMBRE____]
+    [7][8][9]
+    [4][5][6][/]
+    [1][2][3][*]
+    [0][=][-][+]
+
+
+
 ### EXO PHP ET SQL : CONSTRUIRE UNE REQUETE SQL DELETE
 
-// Créer une fonction qui prend en paramètre 
-// $nomTable        LE NOM DE LA TABLE SQL
-// $id              VALEUR DE LA COLONNE id A EFFACER
+    // Créer une fonction qui prend en paramètre 
+    // $nomTable        LE NOM DE LA TABLE SQL
+    // $id              VALEUR DE LA COLONNE id A EFFACER
 
 
-function creerDeleteSQL ($nomTable, $id)
-{
-    // AJOUTER LE CODE MANQUANT
+    function creerDeleteSQL ($nomTable, $id)
+    {
+        // AJOUTER LE CODE MANQUANT
 
-    return $requeteSQLPreparee;
-}
+        return $requeteSQLPreparee;
+    }
 
-$requeteSQLPreparee = creerDeleteSQL("contact", 5);
+    $requeteSQLPreparee = creerDeleteSQL("contact", 5);
 
-echo "<pre>$requeteSQLPreparee</pre>";
-/*
-ON DEVRAIT OBTENIR LE TEXTE SUIVANT:
+    echo "<pre>$requeteSQLPreparee</pre>";
+    /*
+    ON DEVRAIT OBTENIR LE TEXTE SUIVANT:
 
-DELETE FROM contact
-WHERE id = 5
+    DELETE FROM contact
+    WHERE id = 5
 
-*/
+    */
 
 
 ### EXO PHP ET SQL : CONSTRUIRE UNE REQUETE SQL INSERT
 
-// Créer une fonction qui prend en paramètre 
-// $nomTable        LE NOM DE LA TABLE SQL
-// $tabAssoColVal   UN TABLEAU ASSOCIATIF
+    // Créer une fonction qui prend en paramètre 
+    // $nomTable        LE NOM DE LA TABLE SQL
+    // $tabAssoColVal   UN TABLEAU ASSOCIATIF
 
 
-function creerInsertSQL ($nomTable, $tabAssoColVal)
-{
-    // AJOUTER LE CODE MANQUANT
+    function creerInsertSQL ($nomTable, $tabAssoColVal)
+    {
+        // AJOUTER LE CODE MANQUANT
 
-    return $requeteSQLPreparee;
-}
+        return $requeteSQLPreparee;
+    }
 
-$requeteSQLPreparee = creerInsertSQL("newsletter", [ "nom" => "julie", "email" => "julie@nomail.me" ]);
+    $requeteSQLPreparee = creerInsertSQL("newsletter", [ "nom" => "julie", "email" => "julie@nomail.me" ]);
 
-echo "<pre>$requeteSQLPreparee</pre>";
-/*
-ON DEVRAIT OBTENIR
+    echo "<pre>$requeteSQLPreparee</pre>";
+    /*
+    ON DEVRAIT OBTENIR
 
-INSERT INTO newsletter
-( nom, email )
-VALUES
-( :nom, :email )
+    INSERT INTO newsletter
+    ( nom, email )
+    VALUES
+    ( :nom, :email )
 
 
-// ATTENTION: 
-// LES VALEURS DU TABLEAU ASSOCIATIF NE SONT PAS UTILISEES
-// ON MET DES JETONS (TOKENS) A LA PLACE DES VALEURS
-// SEULS LES CLES DU TABLEAU ASSOCIATIF SERVENT...
+    // ATTENTION: 
+    // LES VALEURS DU TABLEAU ASSOCIATIF NE SONT PAS UTILISEES
+    // ON MET DES JETONS (TOKENS) A LA PLACE DES VALEURS
+    // SEULS LES CLES DU TABLEAU ASSOCIATIF SERVENT...
 
-*/
+    */
 

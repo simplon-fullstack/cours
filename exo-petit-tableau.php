@@ -19,11 +19,16 @@ function trouverMinN ($tabNombre)
     // ATTENTION: NE PAS OUBLIER DE DONNER UNE VALEUR INITIALE AU PLUS PETIT
     // PARCOURIR LE TABLEAU DU PREMIER AU DERNIER ELEMENT
     // ET POUR CHAQUE ELEMENT COMPARER AVEC LE PLUS PETIT
+
+    // je donne une valeur initiale au plus petit
     $min = $tabNombre[0];
+
+    // je parcours chaque élément du tableau
     foreach($tabNombre as $nombre)
     {
+        // pour chaque $nombre, je le compare avec $min (la plus petite valeur)
         if ($nombre < $min)
-            $min = $nombre;
+            $min = $nombre;     // $nombre devient la plus petite valeur
     }
 
     return $min;
