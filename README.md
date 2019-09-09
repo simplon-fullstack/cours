@@ -118,8 +118,8 @@ cours et exercices
     }
 
     // TESTER AVEC 
-    console.log(trouverMin3([ 32, 5, 1, 2 ]));      // 1
-    console.log(trouverMin3([ 12, 11, 33, 78 ]));   // 11
+    console.log(trouverMinN([ 32, 5, 1, 2 ]));      // 1
+    console.log(trouverMinN([ 12, 11, 33, 78 ]));   // 11
 
 
 ### CALCULER LE PRIX TTC
