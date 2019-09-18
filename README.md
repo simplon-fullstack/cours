@@ -444,3 +444,37 @@ cours et exercices
 
     */
 
+### EXO PHP ET SQL : CONSTRUIRE UNE REQUETE SQL UPDATE
+
+    // Créer une fonction qui prend en paramètre 
+    // $nomTable        LE NOM DE LA TABLE SQL
+    // $tabAssoColVal   UN TABLEAU ASSOCIATIF
+
+
+    function creerUpdateSQL ($nomTable, $tabAssoColVal)
+    {
+        // AJOUTER LE CODE MANQUANT
+
+        return $requeteSQLPreparee;
+    }
+
+    $requeteSQLPreparee = creerUpdateSQL("newsletter", [ "nom" => "julie", "email" => "julie@nomail.me" ]);
+
+    echo "<pre>$requeteSQLPreparee</pre>";
+    /*
+    ON DEVRAIT OBTENIR
+
+    UPDATE newsletter
+    SET
+    nom = :nom,
+    email = :email
+    WHERE 
+    id = :id
+
+    // ATTENTION: 
+    // LES VALEURS DU TABLEAU ASSOCIATIF NE SONT PAS UTILISEES
+    // ON MET DES JETONS (TOKENS) A LA PLACE DES VALEURS
+    // SEULS LES CLES DU TABLEAU ASSOCIATIF SERVENT...
+
+    */
+
