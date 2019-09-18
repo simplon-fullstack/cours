@@ -1,10 +1,49 @@
-# cours
+# COURS
 
 cours et exercices
 
 ## JS ET PHP
 
+    La programmation fonctionnelle est très importante pour les développeurs.
+
+    Il faut voir les fonctions comme des boîtes
+    * avec des entrées  (paramètres)
+    * et une sortie     (valeur de retour)
+
+    Les fonctions permettent
+    * d'organiser son code
+    * de centraliser son code pour ne pas le répéter (DRY)
+    * de cacher la complexité d'un code dans une fonction
+        * (dev senior code la fonction, dev junior utilise la fonction)
+    * de mieux travailler en équipe
+
+    CONSEIL:
+    * pour distinguer les différentes fonctions, on leur donne un nom unique
+    * utiliser un verbe dans le nom de la fonction
+
+
+    A RETENIR:
+
+    2 ETAPES:
+    * définition/déclaration de la fonction
+        (le code dans la fonction est en attente)
+    * appel de la fonction
+        (on active le code de la fonction)
+
+    Les paramètres fournis en entrée à l'appel de la fonction
+        * sont obligatoires
+        * doivent être fournis dans le même ordre que lors de la déclaration de la fonction
+        * les paramètres optionnels sont à la fin de la liste et proposent une valeur par défaut au paramètre
+
+    Pour renvoyer la valeur de sortie de fonction
+    on utilise le mot clé return suivie de la valeur à produire
+    * l'instruction return arrête le code de la fonction
+    * et le code suivant l'appel de la fonction reprend
+
+    
 ## FONCTIONS EN JS
+
+```js
 
     // DECLARER LA FONCTION
     function nomFonction (param1, param2)
@@ -20,9 +59,15 @@ cours et exercices
     // AFFICHER DANS LA CONSOLE
     console.log(resultat);
 
+```
+
 
 ## FONCTIONS EN PHP
 
+https://www.php.net/manual/fr/language.functions.php
+
+```php
+<?php
     // DECLARER LA FONCTION
     function nomFonction ($param1, $param2)
     {
@@ -37,6 +82,8 @@ cours et exercices
     // AFFICHER LE RESULTAT
     echo "<h3>LE RESULTAT EST $resultat</h3>";
 
+?>
+```
 
 
 
