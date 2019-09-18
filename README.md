@@ -40,7 +40,7 @@ cours et exercices
     * l'instruction return arrête le code de la fonction
     * et le code suivant l'appel de la fonction reprend
 
-    
+
 ## FONCTIONS EN JS
 
 ```js
@@ -84,16 +84,6 @@ https://www.php.net/manual/fr/language.functions.php
 
 ?>
 ```
-
-
-
-
-
-
-
-
-
-
 
 ## EXERCICES FONCTIONS
 
