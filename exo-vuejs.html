@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO VUEJS</title>
+    <style>
+            p {
+                font-size: 14px;
+            }
+            p.active{ 
+                border:1px solid red;
+            }
+    </style>
+</head>
+<body>
+    <!-- IL FAUT UNE BALISE CONTAINER POUR VUEJS -->
+    <!-- WebApp OU de SPA Single Page Application -->
+    <!-- ON CREE UNE APPLICATION DANS LE NAVIGATEUR -->
+    <div id="app">
+        <h3>avant {{ texte1 }} apres</h3>
+        <img :src="image1"><!-- notation raccourcie sans v-bind -->
+        <img class="clickable" v-bind:src="image1">
+        <br>
+        <button @click="afficherParagraphe = !afficherParagraphe">cliquez pour afficher ou cacher</button>
+        <button v-on:click="afficherParagraphe = !afficherParagraphe">cliquez pour afficher ou cacher</button>
+        <button @click="changerTexte">cliquez pour afficher ou cacher</button>
+        <p v-if="afficherParagraphe">paragraphe de texte</p>
+        <p v-else>texte alternatif</p>
+        <ul>
+            <!-- menu est un alias de VueJS (pas vraiment une variable JS) -->
+            <li v-for="menu in tabLi">{{ menu }}</li>
+        </ul>
+
+        <h3>liste des iphones</h3>
+        <div class="container">
+            <article v-for="phone in tabPhone">
+                <h3>{{ phone.nom }} : {{ phone.prix }} euros</h3>
+            </article>
+        </div>
+
+
+        <h3>CHANGER LE CSS</h3>
+        <button @click="isActive = !isActive; maFontSize++;">cliquer pour changer la classe</button>
+        <p :class="{ active: isActive}" :style="{fontSize: maFontSize + 'px'}">TEXT QUI VA CHANGER D'APPARENCE</p>
+    </div>
+
+    <!-- IL FAUT CHARGER LE CODE DE VUEJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- JE PEUX MAINTENANT UTILISER VUEJS DANS MA PAGE -->
+    <script>
+// VUEJS EST UN FRAMEWORK CAR IL NOUS OBLIGE 
+// A SUIVRE UN CERTAINE ORGANISATION DE NOTRE CODE
+var app = new Vue({
+  el: '#app',   // sélecteur CSS qui relie JS au HTML
+  data: {
+      // ON CREE LES VARIABLES QUI SERONT SOUS LA GESTION DE VUEJS
+      // CES VARIABLES PEUVENT UTILISEES DANS LE HTML DE VUEJS
+      message: 'Hello Vue !',
+      texte1:  'le texte que je veux mémoriser',
+      image1: 'billets/5euros.jpg',
+      afficherParagraphe: true,
+      tabLi: [ 'iphone1', 'iphone2', 'iphone3' ],
+      tabPhone: [
+          { nom: 'iphone1', prix: 100 },
+          { nom: 'iphone2', prix: 200 },
+          { nom: 'iphone3', prix: 300 }
+      ],
+      isActive: false,
+      maFontSize: 14
+  },
+  methods: {
+      // ICI ON VA DECLARER LES FONCTIONS QU'ON VEUT UTILISER AVEC VUEJS
+      changerTexte: function () {
+          // UTILE SI ON A PLUSIEURS LIGNES DE CODE
+          // A EXECUTER POUR REMPLIR NOTRE TACHE
+
+          // this.afficherParagraphe = !this.afficherParagraphe;
+          app.afficherParagraphe = !app.afficherParagraphe;
+      }
+  }
+})
+
+// EN VANILLA JS
+var baliseImg = document.querySelector("img.clickable");
+baliseImg.addEventListener('click', function(){
+    console.log('tu as cliqué');
+});
+    </script>
+</body>
+</html>
