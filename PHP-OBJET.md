@@ -52,7 +52,7 @@
         // code en attente
     }
     // ETAPE2: APPEL A LA FONCTION
-    faireTacheF1();     // activer le code dans la fonction faireTacheF1
+    faireTacheF1();    // activer le code dans la fonction faireTacheF1
 
 
     // VOCABULAIRE: 
@@ -217,9 +217,9 @@
     // PERMET DE CODER AVEC DES LIGNES PLUS "NATURELLES"
     // SUJET VERBE COMPLEMENTS
     // ASTUCES:
-    // OBJET: DONNER DES NOMS COMMUNS
-    // METHODE: UTILISER UN VERBE
-    // PARAMETRES: INFOS COMPLEMENTAIRES POUR POUVOIR REALISER L'ACTION
+    // OBJET:       DONNER DES NOMS COMMUNS
+    // METHODE:     UTILISER UN VERBE
+    // PARAMETRES:  INFOS COMPLEMENTAIRES POUR POUVOIR REALISER L'ACTION
 
 
 ## EXEMPLES DE CLASSES ET DE METHODES
