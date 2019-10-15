@@ -270,6 +270,207 @@
     $thermomix -> monterBlancNeige();
 
 
+## MARDI 15/10: PROGRAMMATION ORIENTE OBJET (SUITE)
+
+    classe
+    objet
+    methodes (fonctions rangées dans des classes)
+
+
+        POUR FAIRE DE LA PROGRAMMATION ORIENTE OBJET
+        ON COMMENCE PAR CREER UNE CLASSE
+        ET ON DECLARE SES METHODES DANS LA CLASSE
+
+    // DECLARATION => LE CODE EST EN ATTENTE
+    class MaClasse
+    {
+        // DECLARATIONS DES METHODES
+        function faireTravailA ()
+        {
+            // ECRIRE VOTRE CODE ICI...
+        }    
+    }    
+
+    // POUR EXECUTER LE CODE
+    // AVEC LA POO
+    // ON DOIT D'ABORD CREER UN OBJET
+    // new OPERATEUR D'INSTANCIATION (VOCABULAIRE)
+    $objet = new MaClasse;
+
+    // ET ENSUITE JE PEUX UTILISER L'OBJET POUR ACTIVER MA METHODE
+    // -> OPERATEUR D'ACCES (VOCABULAIRE)
+    $objet -> faireTravailA();
+
+    SUR CETTE BASE, ON VA AVOIR BEAUCOUP DE POSSIBILITES QUI VONT SE RAJOUTER 
+    => CA VA ETRE PLUS COMPLEXE A MAITRISER
+    => IL FAUT PRATIQUER POUR MIEUX COMPRENDRE
+
+    PHP ORIENTE OBJET EST CONSTRUIT DE MANIERE "CLASSIQUE" 
+    PAR RAPPORT AUX AUTRES LANGAGES ORIENTE OBJET
+    (JAVA, Swift et Objective C, C++, C#, etc...)
+
+    ATTENTION: JavaScript EST AUSSI UN LANGAGE ORIENTE OBJET
+            MAIS UN PEU SPECIAL PAR RAPPORT AUX AUTRES
+
+## COMMENT FAIRE DE LA POO EN PHP
+
+    CRITERE SIMPLE: 
+    SI ON RANGE NOTRE CODE DANS DES CLASSES ALORS C'EST DE LA POO
+
+    AVANTAGE DE PHP: 
+    LANGAGE MIXTE QUI PERMET DE FAIRE DU FONCTIONNEL 
+    ET AUSSI DE L'OBJET MELANGES
+    => CA PERMET DE CONTINUER A UTILISER DES ANCINES CODES
+        ET DE LES PASSER PROGRESSIVEMENT EN ORIENTE OBJET
+
+    AVEC LARAVEL: ILS ONT OPTE POUR L'APPROCHE PRATIQUE
+        MIX ENTRE OBJET ET PAS OBJET
+
+    DANS LES FRAMEWORKS PHP POPULAIRES
+    * LARAVEL       https://laravel.com/
+    * SYMFONY       https://symfony.com/
+    * ZEND          https://framework.zend.com/
+
+    PAR ORDRE DE POPULARITE ET AUSSI DE COMPLEXITE
+    SYMFONY ET ZEND PRONENT LE TOUT POO
+
+    TOUS CES FRAMEWORKS SONT MVC
+    => SI ON UTILISE UN FRAMEWORK MVC 
+        ALORS ON VA COMPRENDRE RAPIDEMENT LES AUTRES
+
+
+## POURQUOI LARAVEL EST MOINS OBJET QUE SYMFONY ???
+
+    class Pompier
+    {
+        // METHODES STATIC
+        // ATTENTION: CE SONT DES METHODES DE CLASSE
+        static function reanimer ()
+        {
+            // AJOUTER LE CODE ICI
+        }
+
+        // METHODES
+        // CE SONT DES METHODES D'OBJET
+        function eteindreFeu ()
+        {
+            // AJOUTER LE CODE ICI
+        }
+
+    }
+
+    $nicolas = new Pompier;
+    $nicolas -> eteindreFeu();
+
+    // POUR ACTIVER UNE METHODE static
+    // => JE N'AI PAS BESOIN DE CREER D'OBJET
+    // IL FAUT DONNER LA CLASSE AVANT LE NOM DE LA METHODE
+    // :: OPERATEUR DE RESOLUTION DE PORTEE
+    // https://www.php.net/manual/fr/language.oop5.paamayim-nekudotayim.php
+    Pompier::reanimer();
+
+    // DANS LARAVEL
+    // ON A LE FICHIER routes/web.php
+    // POUR AJOUTER UNE NOUVELLE ROUTE, ON ECRIT
+    // Route::view('/espace-membre', 'espace-membre');
+    // => ON APPELLE LA METHODE STATIC view DANS LA CLASSE Route
+
+
+
+
+
+## METHODES MAGIQUES EN PHP
+
+    https://www.php.net/manual/fr/language.oop5.magic.php
+
+    => C'EST LE COTE DIFFICILE DE LA POO
+    => SI ON NE SAIT PAS CE QUE C'EST ON NE COMPREND LE CODE POO
+
+## CONSTRUCTEUR __construct
+
+    class Pompier
+    {
+        // METHODES
+        // METHODE MAGIQUE => CONSTRUCTEUR
+        // LE NOM DOIT ETRE __construct
+        function __construct ()
+        {
+            // debug
+            echo "<h1>__construct</h1>";
+        }
+
+        // METHODE MAGIQUE => DESTRUCTEUR
+        // LE NOM DOIT ETRE __construct
+        function __destruct ()
+        {
+            // debug
+            echo "<h1>__destruct</h1>";
+        }
+
+    }
+
+    echo "<h1>AVANT</h1>";
+    $long = new Pompier; // DECLENCHE LA METHODE __construct
+    echo "<h1>APRES</h1>";
+
+    // SI ON COMPARE AVEC JS
+    // C'EST UN PEU COMME LES EVENT LISTENERS ET LES CALLBACK
+    // EVENEMENT => new
+    // CALLBACK __construct
+
+
+## METHODES CONSTRUCTEURS AVEC PARAMETRES
+
+
+    class Garagiste
+    {
+        // METHODE MAGIQUE CONSTRUCTEUR
+        // ON N'A PAS LE CHOIX SUR LE NOM DE LA METHODE __construct
+        // MAIS ON PEUT CHOISIR LE NOMBRE DE PARAMETRES
+        function __construct ($nom, $prenom)
+        {
+            // debug
+            echo "<h1>Bonjour je m'appelle $prenom $nom ! Et je suis garagiste</h1>";
+        }
+    }
+
+    // SI LA METHODE CONSTRUCTEUR DEMANDE DES PARAMETRES
+    // ALORS IL FAUT LES FOURNIR QUAND ON FAIT LE new
+    $victor = new Garagiste("Charlemagne", "victor");    
+        // => PHP VA APPELER __construct("Charlemagne", "victor")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
