@@ -440,6 +440,186 @@
         // => PHP VA APPELER __construct("Charlemagne", "victor")
 
 
+## MERCREDI 16/10
+
+    POO Programmation Orienté Objet
+    méthodes static
+    méthodes magiques
+
+    class Poissonnier
+    {
+        // PROPRIETES
+        // UNE PROPRIETE/ATTRIBUT EST UNE VARIABLE RANGEE DANS UNE CLASSE
+        public $nom; 
+
+        // --------------------------------
+        // METHODES STATIC DE CLASSE
+        static function vendre($poisson)
+        {
+
+        }
+
+        // --------------------------------
+        // METHODES D'OBJET
+
+        // METHODES MAGIQUES D'OBJET
+        // https://www.php.net/manual/fr/language.oop5.magic.php
+        // CONTRUCTEUR
+        // PHP VA ACTIVER AUTOMATIQUEMENT LA METHODE __construct
+        // QUAND ON FAIT UN new
+        // exemple: $objet = new Poissonnier; 
+        // PHP APPELLE ENSUITE $objet -> __construct();
+        function __construct ()
+        {
+            // CODE A EXECUTER A CHAQUE new
+        }
+
+        // DESTRUCTEUR
+        function __destruct ()
+        {
+            // CODE QUI SERA EXECUTE A LA FIN DU PROGRAMME
+            // (OU SI ON DETRUIT DES OBJETS... unset)
+        }
+
+
+        function ecailler ()
+        {
+            // ECRIRE VOTRE CODE ICI
+        }
+    }
+
+    // PROGRAMMATION ORIENTE OBJET CLASSIQUE
+    $daniel = new Poissonnier;
+    $daniel -> ecailler();
+
+    // SI ON PASSE DIRECTEMENT PAR UNE METHODE STATIC DE CLASSE
+    Poissonnier::vendre("daurade");
+    // (...EN FAIT, ON FAIT DU FONCTIONNEL ET ON DIT QU'ON FAIT DE LA POO... 
+    // ... UN PEU PIPEAU SUR LE DISCOURS)
+    // PLUS FACILE CAR MOINS DE CODE => LARAVEL TROUVE CA COOL
+
+## PROPRIETES DE CLASSES
+
+
+    class Personne
+    {
+        // PROPRIETE STATIC DE CLASSE
+        // COLLECTIF A TOUS LES OBJETS DE LA CLASSE
+        public static $pays;
+        public static $formation;
+        public static $genre;
+
+        // PROPRIETES D'OBJET
+        // INDIVIDUEL A CHAQUE OBJET
+        // CE QUI SERT A DISTINGUER UNE PERSONNE D'UNE AUTRE
+        // => MODELISATION 
+        // => RGPD
+        public $nom;        // ATTENTION, IL Y A $
+        public $prenom;
+        public $login;
+        public $password;
+        public $adresse;
+    }
+
+    class PageWeb
+    {
+        // PROPRIETES D'OBJETS
+        // CE QUI DIFFERENCIE UNE PAGE D'UNE AUTRE
+        public $url;
+        public $contenu;
+        public $title;
+        public $codeCSS;
+    }
+
+    $personne1 = new Personne;
+    // ECRITURE
+    // POUR STOCKER UNE VALEUR DANS UNE PROPRIETE, JE PASSE D'ABORD PAR L'OBJET
+    $personne1 -> nom   = "gomis";    // ON MEMORISE UN TEXTE DANS LA PROPRIETE
+    // ATTENTION PAS DE $ AVANT nom
+    $personne -> prenom = "florence";
+    $personne -> login  = "gomis";
+
+    // LECTURE: ACCEDER A LA VALEUR D'UNE PROPRIETE
+    echo "Bonjour Je m'appelle " . $personne1->nom;
+
+## ON MET TOUT ENSEMBLE
+
+    $this PERMET DANS UNE METHODE D'ACCEDER AUX PROPRIETES DE L'OBJET
+    QUI A SERVI A APPELER LA METHODE
+
+    <?php
+
+    class Danseuse
+    {
+        //--------------------------------
+        // PROPRIETES STATIC DE CLASSE
+        public static $musique          = "rock";
+        public static $salleSpectacle   = "Dome";
+        public static $nomGroupe        = "les spice girls";
+        public static $manager          = "";
+
+        // METHODES STATIC DE CLASSE
+        static function voyager ($salleSpectacle)
+        {
+            // JE MEMORISE LA SALLE DE SPECTCALE
+            Danseuse::$salleSpectacle = $salleSpectacle;    
+        }
+
+        //--------------------------------
+        // PROPRIETES D'OBJET
+        public $experience  = 0; // VALEUR PAR DEFAUT POUR CHAQUE OBJET
+        public $nom         = "";
+
+        // METHODES D'OBJET
+        // ON PEUT UTILISER $this POUR SAVOIR QUEL OBJET A SERVI A ACTIVER LA METHODE D'OBJET
+        function danser ($style)
+        {
+            echo "<h3>Nous sommes à " . Danseuse::$salleSpectacle . "</h3>";
+            // $this EST UNE VARIABLE SPECIALE QUI RENVOIE A L'OBJET 
+            // QUI A SERVI A APPELER LA METHODE D'OBJET
+            // DANS UNE METHODE GRACE $this JE PEUX ACCEDER AUX PROPRIETES DE L'OBJET 
+            echo "<h3>J'appelle " . $this -> nom . "</h3>";
+        }
+
+    }
+
+
+    // JE PEUX CREER PLUSIEURS OBJETS 
+    // ET LEUR DONNER DES VALEURS DIFFERENTES POUR LES PROPRIETES D'OBJET
+    $danseuse1 = new Danseuse;
+    $danseuse1 -> nom = "tania";
+
+    $danseuse2 = new Danseuse;
+    $danseuse2 -> nom = "maria";
+
+    $danseuse3 = new Danseuse;
+    $danseuse3 -> nom = "fazia";
+
+    Danseuse::$nomGroupe = "les totally spice";
+    Danseuse::$manager = "long";
+
+    // CHAQUE PROPRIETE D'OBJET EST INDIVIDUEL A CHAQUE OBJET
+    echo $danseuse1 -> nom;     // tania
+    echo $danseuse2 -> nom;     // maria
+
+    // voyager EST UNE METHODE static DE CLASSE
+    Danseuse::voyager("Paris");
+
+    // danser EST UNE METHODE D'OBJET
+    $danseuse1->danser("rock");         // $this = $danseuse1
+    $danseuse2->danser("valse");        // $this = $danseuse2
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
