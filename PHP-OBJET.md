@@ -611,6 +611,123 @@
 
 
 
+## COURS POO 17/10
+
+POO Programmation Orienté Objet
+
+class Medecin
+{
+    //-------------------------------------------------
+    // PROPRIETES STATIC DE CLASSE
+    static $hopital         = "timone";
+    static $heureOuverture  = "07H";
+    static $heureFermeture  = "20H";
+
+    // METHODES STATIC DE CLASSE
+    // => COLLECTIF: COMMUN A TOUS LES OBJETS DE LA CLASSE
+    static function definirHoraires ($debut, $fin)
+    {
+        Medecin::$heureOuverture = $debut;
+        Medecin::$heureFermeture = $fin;
+    }
+
+    //-------------------------------------------------
+    // PROPRIETES D'OBJET
+
+    // METHODES D'OBJET
+    // => INDIVIDUEL: CHAQUE OBJET A SES METHODES
+    function sauverVie ($nomPersonne)
+    {
+        // debug
+        echo "<h2>$nomPersonne est sauvée par {$this->nom}</h2>";
+    }
+
+}
+
+
+// PROPRIETES ET METHODES D'OBJET
+$medecin1 = new Medecin;
+$medecin1 -> nom = "durand";
+$medecin1 -> sauverVie("floflo");       
+// ON MEMORISE "durand" DANS $medecin ET DANS SA PROPRIETE nom
+// => floflo est sauvée par durand
+
+$medecin2 = new Medecin;
+$medecin2 -> nom = "pitt";
+$medecin2 -> sauverVie("cloclo");       
+// cloclo est sauvée par pitt
+
+// IMPORTANT DE COMPRENDRE
+// DANS UNE METHODE D'OBJET
+// PHP PROPOSE LA VARIABLE $this
+// QUI CONTIENT L'OBJET QUI A SERVI A APPELER LA METHODE
+
+
+## HERITAGE ENTRE CLASSES
+
+class Serveur       // CLASSE ENFANT
+    extends Metier  // HERITAGE AVEC LA CLASSE PARENTE Metier
+{
+    //-------------------------------------------------
+    // PROPRIETES D'OBJET
+
+    // METHODES D'OBJET
+    function prendreCommande($commande)
+    {
+
+    }
+}
+
+// PROBLEMATIQUE
+// LES 2 CLASSES Medecin ET Serveur 
+// ONT UNE PROPRIETE D'OBJET $nom
+// => REPETITION
+// => PEUT-ON EVITER DE REPETER LE CODE ?
+// EN POO, IL ME FAUDRAIT UNE CLASSE COMMUNE
+
+class Metier
+{
+    //-------------------------------------------------
+    // PROPRIETES D'OBJET
+    public $nom = "";
+
+
+}
+
+
+// ATTENTION: ON PEUT ENCHAINER PLUSIEURS NIVEAUX D'HERITAGE
+class GrandParent
+{
+    // PROPRIETES ET METHODES STATIC
+
+    // PROPRIETES ET METHODES D'OBJET
+}
+
+class Parent extends GrandParent
+{
+    // PROPRIETES ET METHODES STATIC
+
+    // PROPRIETES ET METHODES D'OBJET
+
+}
+
+class Enfant extends Parent
+{
+    // PROPRIETES ET METHODES STATIC
+
+    // PROPRIETES ET METHODES D'OBJET
+
+}
+
+
+// 
+
+
+
+
+
+
+
 
 
 
